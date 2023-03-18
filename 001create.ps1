@@ -19,13 +19,14 @@ Write-Output "Starting CASE 001 CREATE EVIDENCE script"
 Write-Output "------------------------------------------------------"
 Write-Output "In a PowerShell terminal, run:"
 Write-Output ".\001create.ps1"
-Write-Output ""
 Write-Output "------------------------------------------------------"
 
 # Set the path to the evidence folder
 $evidencePath = ".\001_Evidence"
 
 # Call the undo script to start fresh
+
+Write-Output "First, we'll clean up any old evidence."
 .\001undo.ps1
 
 # Test-Path

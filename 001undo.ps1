@@ -13,19 +13,13 @@ function DeleteEvidenceFolder($evPath) {
     if (Test-Path $evPath -PathType Container) {
         Get-ChildItem -Path $evPath | Where-Object { $_.PSIsContainer -eq $false } | Remove-Item -Force
         Remove-Item $evPath -Force -Recurse
-        Write-Output "Deleted directory '$evPath' and its immediate child files."
+        Write-Output "     Deleted directory '$evPath' and any child files."
     }
 }
 
-Clear-Host
-
 Write-Output ""
 Write-Output "------------------------------------------------------"
-Write-Output "Starting CASE 001 UNDO script"
-Write-Output "------------------------------------------------------"
-Write-Output "In a PowerShell terminal, run:"
-Write-Output ".\001undo.ps1"
-Write-Output ""
+Write-Output "     Starting CASE 001 UNDO script"
 Write-Output "------------------------------------------------------"
 
 $evidencePath = ".\001_Evidence"
@@ -35,5 +29,5 @@ DeleteEvidenceFolder $evidencePath
 DeleteEvidenceFolder $evidenceCopyPath
 DeleteEvidenceFolder $evidenceOutPath
 
-Write-Output "Done cleaning up the evidence."
+Write-Output "     Done cleaning up any old evidence."
 Write-Output "------------------------------------------------------"

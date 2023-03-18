@@ -39,8 +39,11 @@ New-Item -ItemType Directory -Path $evidenceOutPath | Out-Null
 
 # If the evidence folder doesn't exist, create it
 if (-not (Test-Path $evidencePath -PathType Container)) {
-  # Execute 001create.ps1 script
-  .\001create.ps1
+  Write-Host "No evidence found at $evidencePath"
+  Write-Host "Please create some evidence first using .\001create.ps1"
+  Write-Host "Or change the path to the evidence."
+  Write-Output "------------------------------------------------------"
+  exit 1
 }
 
 # If the forensic copy folder doesn't exist, create it

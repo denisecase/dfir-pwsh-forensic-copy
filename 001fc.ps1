@@ -116,9 +116,6 @@ if ($diffCount -eq 0) {
   Write-Output "------------------------------------------------------"
   Write-Output "Explore: try modifying a forensic copy file."
   Write-Output "Run .\001recheck.ps1 to see the differences."
-  Write-Output "------------------------------------------------------"
-
-
 }
 else {
   Write-Host "Evidence copy verification failed: $diffCount differences found."
