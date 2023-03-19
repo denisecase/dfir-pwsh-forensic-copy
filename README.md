@@ -2,14 +2,14 @@
 
 > Digital Forensics - PowerShell Skills
 
-Welcome - This repository is designed to help users develop their 
+Welcome - this repository is designed to help users develop 
 PowerShell skills for digital forensics purposes. 
 The primary focus is on copying forensic evidence and 
 verifying the copied data with hash values to ensure the 
 integrity of the evidence. 
 
 The repository provides a collection of PowerShell scripts and resources 
-to facilitate learning and building practical skills in digital forensics.
+to facilitate building practical skills in digital forensics.
 
 ## Recommended Tools
 
@@ -33,7 +33,7 @@ or alias - and it helps prevent users from accidentally
 
 ## PowerShell Commands
 
-New-Item -ItemType Directory -Force -Path
+`New-Item -ItemType Directory -Force -Path`
 
 This command creates a new directory with the specified name and path. 
 The -ItemType parameter specifies the type of item to create 
@@ -41,20 +41,20 @@ The -ItemType parameter specifies the type of item to create
 command to overwrite existing directories with the same name, 
 and the -Path parameter specifies the location of the new directory.
 
-Copy-Item
+`Copy-Item`
 
 This command is used to copy files and folders from one location to another. 
 It takes two arguments: the source path of the file/folder to be copied, 
 and the destination path of the copied file/folder.
 
-Get-FileHash
+`Get-FileHash`
 
 This command computes the hash value of a specified file using a chosen 
 hashing algorithm. The -Algorithm parameter specifies the hashing 
 algorithm to use, and the output can be saved to a file using the 
 Out-File command.
 
-Out-File
+`Out-File`
 
 This command is used to save the output of a command to a text file. 
 The output can be piped to Out-File, which takes the file path as an argument.
