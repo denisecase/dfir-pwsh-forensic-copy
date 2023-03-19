@@ -1,7 +1,7 @@
 <#
     PowerShell for Digital Forensics
 
-    Case 001: Forensic Copy
+    Case 555: Forensic Copy
     Create example evidence files
 
     Author:  Denise Case
@@ -15,19 +15,19 @@ Clear-Host
 # Write header to the console
 Write-Output ""
 Write-Output "------------------------------------------------------"
-Write-Output "Starting CASE 001 CREATE EVIDENCE script"
+Write-Output "Starting CASE 555 CREATE EVIDENCE script"
 Write-Output "------------------------------------------------------"
 Write-Output "In a PowerShell terminal, run:"
-Write-Output ".\001create.ps1"
+Write-Output ".\555create.ps1"
 Write-Output "------------------------------------------------------"
 
 # Set the path to the evidence folder
-$evidencePath = ".\001_Evidence"
+$evidencePath = ".\555_Evidence"
 
 # Call the undo script to start fresh
 
 Write-Output "First, we'll clean up any old evidence."
-.\001undo.ps1
+.\555undo.ps1
 
 # Test-Path
 # is a PowerShell cmdlet that tests whether a path exists.

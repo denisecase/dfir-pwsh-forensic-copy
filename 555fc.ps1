@@ -1,7 +1,7 @@
 <#
     PowerShell for Digital Forensics
 
-    Case 001: Forensic Copy
+    Case 555: Forensic Copy
     Create and verify a forensic copy of the evidence 
 
     Author:  Denise Case
@@ -21,23 +21,23 @@ Clear-Host
 
 write-output ""
 Write-Output "------------------------------------------------------"
-Write-Output "Starting CASE 001 FORENSIC COPY script"
+Write-Output "Starting CASE 555 FORENSIC COPY script"
 Write-Output "------------------------------------------------------"
 write-output "In a PowerShell terminal, run:"
-Write-Output ".\001fc.ps1"
+Write-Output ".\555fc.ps1"
 write-output ""
 Write-Output "------------------------------------------------------"
 
 # Set the paths for the evidence, forensic copy, and output folders
-$evidencePath = ".\001_Evidence"
-$evidenceCopyPath = ".\001_Evidence_Copy_$(Get-Date -Format yyyy-MM-dd)"
-$evidenceOutPath = ".\001_Evidence_Out_$(Get-Date -Format yyyy-MM-dd)"
+$evidencePath = ".\555_Evidence"
+$evidenceCopyPath = ".\555_Evidence_Copy_$(Get-Date -Format yyyy-MM-dd)"
+$evidenceOutPath = ".\555_Evidence_Out_$(Get-Date -Format yyyy-MM-dd)"
 
 # You must have created the evidence folder before running this script
 # if not, we'll create it for you
 if (-not (Test-Path $evidencePath -PathType Container)) {
-  # Execute 001create.ps1 script
-  .\001create.ps1
+  # Execute 555create.ps1 script
+  .\555create.ps1
 }
 
 # Delete and recreate the forensic copy and output folders
@@ -115,7 +115,7 @@ if ($diffCount -eq 0) {
   Write-Output "See evidence summary at $evidenceOutPath."
   Write-Output "------------------------------------------------------"
   Write-Output "Explore: try modifying a forensic copy file."
-  Write-Output "Run .\001recheck.ps1 to see the differences."
+  Write-Output "Run .\555recheck.ps1 to see the differences."
 }
 else {
   Write-Host "Evidence copy verification failed: $diffCount differences found."

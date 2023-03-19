@@ -5,9 +5,9 @@
 # List all files you don't want to commit to the repository
 
 # Ignore the generated evidence folder and its files
-/001_Evidence/
+/555_Evidence/
 
-# Ignore all folders in the root directory that start with 001_Evidence
-/001_Evidence*/
+# Ignore all folders in the root directory that start with 555_Evidence
+/555_Evidence*/
 
 # The end slash after a folder means "ignore all files in this folder, too"

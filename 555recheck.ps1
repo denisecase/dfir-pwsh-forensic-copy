@@ -1,7 +1,7 @@
 <#
     PowerShell for Digital Forensics
 
-    Case 001: Forensic Copy
+    Case 555: Forensic Copy
     Recheck / reverify a forensic copy of the evidence 
     (Introduce a change to the forensic copy and verify it gets detected)
 
@@ -22,16 +22,16 @@ Clear-Host
 
 write-output ""
 Write-Output "------------------------------------------------------"
-Write-Output "Starting CASE 001 FORENSIC COPY RECHECK script"
+Write-Output "Starting CASE 555 FORENSIC COPY RECHECK script"
 Write-Output "------------------------------------------------------"
 write-output "In a PowerShell terminal, run:"
-Write-Output ".\001recheck.ps1"
+Write-Output ".\555recheck.ps1"
 write-output ""
 Write-Output "------------------------------------------------------"
 
-$evidencePath = ".\001_Evidence"
-$evidenceCopyPath = ".\001_Evidence_Copy_$(Get-Date -Format yyyy-MM-dd)"
-$evidenceOutPath = ".\001_Evidence_Out_$(Get-Date -Format yyyy-MM-dd)"
+$evidencePath = ".\555_Evidence"
+$evidenceCopyPath = ".\555_Evidence_Copy_$(Get-Date -Format yyyy-MM-dd)"
+$evidenceOutPath = ".\555_Evidence_Out_$(Get-Date -Format yyyy-MM-dd)"
 
 # Delete and recreate the output folder
 DeleteEvidenceFolder $evidenceOutPath
@@ -40,7 +40,7 @@ New-Item -ItemType Directory -Path $evidenceOutPath | Out-Null
 # If the evidence folder doesn't exist, create it
 if (-not (Test-Path $evidencePath -PathType Container)) {
   Write-Host "No evidence found at $evidencePath"
-  Write-Host "Please create some evidence first using .\001create.ps1"
+  Write-Host "Please create some evidence first using .\555create.ps1"
   Write-Host "Or change the path to the evidence."
   Write-Output "------------------------------------------------------"
   exit 1
@@ -49,7 +49,7 @@ if (-not (Test-Path $evidencePath -PathType Container)) {
 # If the forensic copy folder doesn't exist, create it
 # You'll want to make a change to the forensic copy to see it get detected
 if (-not (Test-Path $evidenceCopyPath -PathType Container)) {
-  .\001fc.ps1
+  .\555fc.ps1
 }
 
 # Verify the integrity of the forensic copy

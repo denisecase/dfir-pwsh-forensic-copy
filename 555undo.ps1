@@ -1,7 +1,7 @@
 <#
     PowerShell for Digital Forensics
 
-    Case 001: Forensic Copy
+    Case 555: Forensic Copy
     Remove example files
 
     Author:  Denise Case
@@ -19,12 +19,12 @@ function DeleteEvidenceFolder($evPath) {
 
 Write-Output ""
 Write-Output "------------------------------------------------------"
-Write-Output "     Starting CASE 001 UNDO script"
+Write-Output "     Starting CASE 555 UNDO script"
 Write-Output "------------------------------------------------------"
 
-$evidencePath = ".\001_Evidence"
-$evidenceCopyPath = ".\001_Evidence_Copy_$(Get-Date -Format yyyy-MM-dd)"
-$evidenceOutPath = ".\001_Evidence_Out_$(Get-Date -Format yyyy-MM-dd)"
+$evidencePath = ".\555_Evidence"
+$evidenceCopyPath = ".\555_Evidence_Copy_$(Get-Date -Format yyyy-MM-dd)"
+$evidenceOutPath = ".\555_Evidence_Out_$(Get-Date -Format yyyy-MM-dd)"
 DeleteEvidenceFolder $evidencePath
 DeleteEvidenceFolder $evidenceCopyPath
 DeleteEvidenceFolder $evidenceOutPath
