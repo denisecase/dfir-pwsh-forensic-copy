@@ -21,15 +21,15 @@ to facilitate building practical skills in digital forensics.
 
 ## Technical Notes
 
-Open PowerShell terminal, type a command and hit ENTER to run a script.  
+Use the VS Code menu to open a new terminal (Terminal \ New Terminal or any other method you like).
 
-In PowerShell commands, the ./ notation specifies the current working directory, 
-allowing commands to reference files and folders located in the 
-current working directory without needing to specify the full path.
+In PowerShell commands, the .\ notation specifies the current working directory, allowing commands to reference files and folders located in the current working directory without needing to specify the full path.
 
-The ./ ensures the file is executed as a script rather than a system command 
-or alias - and it helps prevent users from accidentally
- running a system command or alias with the same name as their script.
+The .\ ensures the file is executed as a script rather than a system command or alias, and it helps prevent users from accidentally running a system command or alias with the same name as their script.
+
+SLASH DIRECTION. The slash notation for running scripts in PowerShell uses a backslash (\), not a forward slash (/).
+In both Windows and Mac/Linux environments, the correct notation is .\\script.ps1 when referencing the current directory.
+However, on Mac/Linux, PowerShell is often run with a forward slash (/) in general, but Windows always uses the backslash for file paths.
 
 ## PowerShell Commands
 
